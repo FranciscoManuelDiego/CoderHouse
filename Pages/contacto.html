@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Styles/contacto.css">
+    <link rel="stylesheet" type="text/css" href="..\normalize.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Multimedia/favicon-16x16.png">
+    <script src="https://kit.fontawesome.com/006037882f.js" crossorigin="anonymous"></script>
+    <title>Ecompany Argentina</title>
+</head>
+<body class="container">
+    <header>
+        <nav class="navbar">
+                <ul>
+                    <li><a href="..\index.html"><img src="../Multimedia/green-e-logo.jpg" class="Logo" alt="Ecompanylogo" height="60px" width="196px"></a></li>
+                    <li><a href="..\Pages\productos.html"><i class="fas fa-mobile-alt"></i>Productos</a></li>
+                    <li><a href="..\Pages\ofertas.html"> <i class="fas fa-credit-card"></i>Ofertas</a></li>
+                    <li><a href="..\Pages\sobrenosotros.html"><i class="fas fa-envelope"></i></i>Sobre Nosotros</a></li>
+                    <li><a href="..\Pages\contacto.html"> <i class="fa fa-user"></i> Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+    <section class="seccionformulario">
+        <div class="contact-box">
+            <img src="../Multimedia/green-e-logo.jpg" class="logocontacto" alt="Ecompanylogo" height="60px" width="196px">
+                <div class="content-box">
+                    <h1 class="h1contacto"> Contactanos!</h1>
+                    <form action="#">
+                        <label class="labelfont" for="Nombre">Nombre </label>
+                            <input class="field" type="text" placeholder="Escribe tu Nombre" required><br>
+                        <label class="labelfont" for="email">E-mail </label>
+                            <input class="field" type="email" placeholder="ejemplo@gmail.com" name="email" required><br>
+                        <label class="labelfont" for="Observaciones"> ¿Que opinion podrias dar de nuestro servicio? </label><br>
+                            <textarea class="field area" placeholder="Escribe tu Comentario" style="resize: none;"></textarea>
+                         <br>
+                        <p class="labelfont">¿Que marcas son tus preferidas?</p>
+                        <select name="letra" id="letra"> 
+                            <option value="Xiaomi">Xiaomi</option>
+                            <option value="Motorola">Motorola</option>
+                            <option value="Samsung">Samsung</option>
+                            <option value="Huawei">Huawei</option>
+                        </select> <br>
+                        <strong class="labelfont">¿Queres recibir info sobre nosotros? </strong>
+                        <input  type="checkbox" name="aceptar" value="1"><br>
+                        <input class="btn" type="submit" value="Enviar">
+                        <input class="btn" type="reset" value="Resetear">
+                    </form>
+                </div>
+        </div>
+	</section>
+    </main>
+    <footer class="footer">
+        <div class="containerfooter">
+            <div class="containerfooter_row">
+                <div class="containerfooter_row_col">
+                    <h2>Nuestras Redes</h2>
+                    <div class="footer_social">
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="containerfooter_row_col">
+                    <h3>Marcas</h3>
+                    <ul>
+                        <li><a href="#">Motorola</a></li>
+                        <li><a href="#">Xiaomi</a></li>
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">Huawei</a></li>
+                    </ul>
+                </div>
+                <div class="containerfooter_row_col">
+                    <h4>Nuestros productos</h4>
+                    <ul>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Terminos y Condiciones</a></li>
+                        <li><a href="#">Contacto </a></li>
+                   </ul>
+                </div>
+                <div class="containerfooter_row_col">
+                    <h5> Metodos de Pago </h5>
+                    <div class="footer_pay">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="copyright">Ecompany - Todos los derechos reservados.</div>
+    </footer>
+</body>
+</html>
