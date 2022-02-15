@@ -329,12 +329,23 @@ ul {
 }
 
 /* Seccion Footer Final */
+
+.copyright {
+    font-size: 1.30em;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(7, 34, 39);
+    font-weight:  300;
+    background-color: rgb(25, 209, 123);
+    text-align: center;
+    border-top: solid rgb(7, 34, 39);
+}
+/* Seccion Footer Final */
 /* Seccion Queries  */
 /* footer responsive */
 @media (min-width: 830px) { 
     .containerfooter_row_col {
         width: 50%;
-        margin-bottom: 30px;;
+        margin-bottom: 30px;
     }
     .footer {
         margin-top: 10em;
