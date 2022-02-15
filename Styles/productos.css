@@ -24,9 +24,9 @@ header {
     display: flex;
 }
 
-.container {  display: grid;
+.container-grid {  display: grid;
     grid-template-columns:  1fr 1fr 1fr;
-    grid-template-rows:  0.05fr 2.5fr 1fr;
+    grid-template-rows:  0.05fr 100% 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -46,58 +46,52 @@ header {
 
 .footer { grid-area: footer; }
  
-/* consultar por esto de porque no se pone la seccion al lado d oferta */
+/* Seccion Navbar */
 .navbar {
     width: 100%;
-    padding: 0px;
     background-color: rgb(25, 209, 123);
-    font-weight: 600;
 }
 
-.Logo img {
-    position: relative;
-    height: 200px;
+.nav-item .nav-link {
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.20em;
+    color: rgb(7, 34, 39);
+    bottom: 10px;
 }
 
-
-nav ul {
-    text-align: center;
+.nav-item .nav-link:hover {
+    text-decoration: none !important;
+    background-color:rgb(24, 192, 114);
+    transition: all 0.3s ease-in 0.1s;
+    color: whitesmoke !important;
 }
+
+#buttonnavbar {
+    background-color:rgb(25, 209, 123); 
+    border: black solid 0.15em; 
+    border-radius: 10%; 
+    color:  rgb(7, 34, 39); margin-right:3.50em;
+}
+#navbarLight {
+    transition: 0.4s;
+}
+
+#barrabusqueda {
+    border-radius: 5%;
+}
+nav ul li i {
+    font-size: 1.20em;
+    padding-left: 10px;
+    margin-left: 5px;
+}
+
+/* Fin de Seccion Navbar */
 
 ul li a {
     text-decoration: none;
     color: rgb(7, 34, 39);
 }
-
-nav ul li  {
-    list-style: none;
-    font-size: 1.20em;
-    color: rgb(7, 34, 39);
-    font-family: "Play&display";
-    display: inline-block;
-    justify-content: space-between;
-    padding: 10px 80px;
-    width: 150px;
-    height: 50px;
-    line-height: 80px;
-    align-items: center;
-    position: relative;
-    bottom: 10px;
-}
-
-nav ul li:hover {
-    background-color:rgb(24, 192, 114);
-    transition: all 0.3s ease-in 0.1s;
-}
-nav ul li a:hover {
-    color: whitesmoke;
-    transition: all 0.1s ease-in 0.1s;
-}
-
-nav ul li i {
-    font-size: 1.10em;
-}
-
 
 /* Seccion Main */
 h1, h2, h3, h4, h5, h6 {
@@ -236,21 +230,10 @@ color:whitesmoke;
 background-color: rgb(22, 185, 109);
 transition: all 0.1s ease-in 0.1s;
 }
-/* Seccion Queries procutos */
 
-@media screen and (max-width:700px) {
-    .container {  display: grid;
-        grid-template-columns:  1fr 1fr 1fr;
-        grid-template-rows:  0.05fr 11fr 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "header header header"
-          "main main main"
-          "seccionproductos ofertaproductos ofertaproductos"
-          "footer footer footer";
-      }
-}
+
+/* Seccion Footer */
+
 
 /* Seccion Footer */
 
@@ -287,6 +270,7 @@ ul {
 .containerfooter_row_col ul li a {
     font-size: 1.50em;
     text-transform: capitalize ;
+    padding-right: 9%;
     display: block;
     transition: all 0.3s ease;
 }
@@ -298,6 +282,7 @@ ul {
 }
 
 .containerfooter_row_col h2, h3, h4, h5 {
+    font-size: 1.50em !important;
     text-transform: capitalize;
     margin-bottom: 15px;
     position: relative;
@@ -309,52 +294,50 @@ ul {
     font-size: 2.20em;
     height: 40px;
     width: 50px;
-    padding: 3%;
+    padding: 2%;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.2);
-    line-height: 40px;
+    line-height: 40px ;
     text-align: center;
     color: rgb(7, 34, 39);
     border-radius: 50%;
+    box-sizing: content-box !important;
     transition: all 0.3s;
 }
 
 .containerfooter_row_col .footer_social a:hover {
     color: white;
 }
+.containerfooter_row_col .footer_pay {
+    padding-top: 10px;
+}
 
 .containerfooter_row_col .footer_pay i{
     display: inline-block;
-    font-size: 3em;
+    font-size: 2.40em;
     height: 40px;
     width: 50px;
-    padding: 3%;
+    padding: 2%;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.2);
     line-height: 40px;
     text-align: center;
     color: rgb(7, 34, 39);
     border-radius: 50%;
+    box-sizing: content-box !important;
     transition: all 0.3s;
 }
 
-
-
-.copyright {
-    font-size: 1.30em;
-    font-family: 'Poppins', sans-serif;
-    color: rgb(7, 34, 39);
-    font-weight:  300;
-    background-color: rgb(25, 209, 123);
-    text-align: center;
-    border-top: solid rgb(7, 34, 39);
-}
-
+/* Seccion Footer Final */
+/* Seccion Queries  */
 /* footer responsive */
-@media (max-width: 767px) { 
+@media (min-width: 830px) { 
     .containerfooter_row_col {
         width: 50%;
-        margin-bottom: 30px;
+        margin-bottom: 30px;;
+    }
+    .footer {
+        margin-top: 10em;
     }
 }
 
@@ -362,5 +345,8 @@ ul {
     .containerfooter_row_col {
         width: 100%;
         margin-bottom: 30px;
+    }
+    .footer {
+        margin-top: 12em;
     }
 }
