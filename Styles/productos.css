@@ -116,12 +116,14 @@ section#seccionmarcas {
     width: 50%;
     margin-bottom: 20px;
     border-bottom: 1px solid rgb(25, 209, 123);
+    padding-left: 3%;
 }
 
 .subtitle {
     color: rgb(25, 209, 123);
     font-size: 3em;
     font-weight: 600;
+    padding-left: 2%;
 }
 
 div.marcas {
@@ -131,6 +133,7 @@ div.marcas {
     padding: 0 3em;
     height: 400px;
     width: 400px;
+    
 }
 
 /*seccion queries para marcas*/
@@ -140,6 +143,7 @@ div.marcas {
     flex-direction: column;
     color: rgb(25, 209, 123);
     font-size: 2em;
+    padding-left: 3%;
 }
 
 
