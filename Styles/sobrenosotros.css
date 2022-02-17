@@ -104,7 +104,7 @@ ul li a {
     text-align: center;
     margin: auto;
     font-size: 2em;
-    padding-bottom: 6em;
+    margin-bottom: 6em;
 }
 
   .imagennosotros_texto { 
@@ -113,24 +113,27 @@ ul li a {
     justify-content: center;
     margin: auto;
     color:  rgb(216, 243, 220) !important ;
-    font-size: 1.50;
+    font-size: 5em;
 
 }
   
   .textonosotros {
     color: rgb(7, 34, 39);
-    font-size: 1.50em;
+    font-size: 3em;
     text-align: center;
     margin: auto;
-    padding-bottom: 6em;
+    margin-bottom: 6em;
 }
 
 .imagennosotros_texto_2 { 
     text-align: center;
-    font-size: 1.50em;
+    font-size: 3em;
     color:  rgb(7, 34, 39);
 }
 
+.imagennosotros_texto_2 h2 {
+    font-size: 2em;
+}
 
 /* Seccion Footer */
 
