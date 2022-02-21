@@ -1,3 +1,4 @@
+/* Inicio Seccion General-Grids */
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Ropa+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
 
@@ -47,11 +48,17 @@ header {
 .seccionformularios { grid-area: seccionformularios;}
   
 .footer { grid-area: footer;}
+/* Fin Seccion General-Grids */
 
-/* Seccion Navbar */
+ /* Inicio de seccion navbar */
 .navbar {
     width: 100%;
     background-color: rgb(25, 209, 123);
+}
+
+.Logo:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
 }
 
 .nav-item .nav-link {
@@ -89,7 +96,7 @@ nav ul li i {
     margin-left: 5px;
 }
 
-/* Fin de Seccion Navbar */
+/* Final de seccion navbar */
 
 /* Seccion Main */
 h1, h2, h3, h4, h5, h6 {
@@ -105,6 +112,8 @@ ul li a {
     text-decoration: none;
     color: rgb(7, 34, 39);
 }
+
+/* Inicio de Seccion Contacto */
 
 .logocontacto {
     margin: auto;
@@ -209,37 +218,9 @@ ul li a {
 .labelfont {
    font-size: 1.50em;
 }
-
-/* Seccion queries contacto */
-@media screen and (max-width:700px) {
-   
-      .seccionformulario {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        padding: 1em 1em;
-     }
-     .logocontacto {
-         height: 90%;
-         width: 90%;
-     }
-}
-
-@media screen and (max-width:400px) {
-    .seccionformulario { 
-        padding: 0.40em 0.40em;
-    }
-    .btn {
-        width: 50%;
-        margin: 2%;
-    }
-}
+/* Final de Seccion Contacto */
 
 /* Seccion Footer */
-
 
 footer {
     background-color: rgb(25, 209, 123);
@@ -342,6 +323,35 @@ ul {
     border-top: solid rgb(7, 34, 39);
 }
 
+/* Final de Seccion Footer */
+
+/* Inicio de Seccion queries contacto */
+@media screen and (max-width:700px) {
+      .seccionformulario {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 1em 1em;
+     }
+     .logocontacto {
+         height: 90%;
+         width: 90%;
+     }
+}
+
+@media screen and (max-width:400px) {
+    .seccionformulario { 
+        padding: 0.40em 0.40em;
+    }
+    .btn {
+        width: 50%;
+        margin: 2%;
+    }
+}
+
 /* footer responsive */
 @media (max-width: 767px) { 
     .containerfooter_row_col {
@@ -356,3 +366,5 @@ ul {
         margin-bottom: 30px;
     }
 }
+
+/* Final de Secion Queries */

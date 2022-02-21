@@ -1,8 +1,7 @@
+/* Inicio Seccion General-Grids */
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Ropa+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
 
-/* Index */
-/* Seccion navbar */
 * {
     padding: 0;
     margin: 0;
@@ -45,11 +44,18 @@ header {
 .ofertaproductos { grid-area: ofertaproductos; }
 
 .footer { grid-area: footer; }
- 
-/* Seccion Navbar */
+
+/* Fin Seccion General-Grids */
+
+ /* Inicio de seccion navbar */
 .navbar {
     width: 100%;
     background-color: rgb(25, 209, 123);
+}
+
+.Logo:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
 }
 
 .nav-item .nav-link {
@@ -86,14 +92,14 @@ nav ul li i {
     margin-left: 5px;
 }
 
-/* Fin de Seccion Navbar */
+/* Final de seccion navbar */
 
 ul li a {
     text-decoration: none;
     color: rgb(7, 34, 39);
 }
 
-/* Seccion Main */
+/* Inicio de seccion main */
 h1, h2, h3, h4, h5, h6 {
     text-overflow: initial;
     font-size: 1.50em;
@@ -102,7 +108,6 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     list-style: none;
 }
-/* Productos */
 
 section#seccionmarcas {
     display: flex;
@@ -133,10 +138,8 @@ div.marcas {
     padding: 0 3em;
     height: 400px;
     width: 400px;
-    
+    margin-top: 5%;
 }
-
-/*seccion queries para marcas*/
 
 .navegar {
     display: block;
@@ -155,6 +158,12 @@ div.marcas {
     justify-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.productcard {
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 .ofertaproductos .productcard {
@@ -234,12 +243,10 @@ color:whitesmoke;
 background-color: rgb(22, 185, 109);
 transition: all 0.1s ease-in 0.1s;
 }
+/* Final de Seccion Main */
 
 
-/* Seccion Footer */
-
-
-/* Seccion Footer */
+/* Inicio de seccion footer */
 
 footer {
     background-color: rgb(25, 209, 123);
@@ -332,7 +339,6 @@ ul {
     transition: all 0.3s;
 }
 
-/* Seccion Footer Final */
 
 .copyright {
     font-size: 1.30em;
@@ -343,24 +349,32 @@ ul {
     text-align: center;
     border-top: solid rgb(7, 34, 39);
 }
-/* Seccion Queries  */
+/* Final de seccion footer */
+
+/* Seccion ed Mediaqueries */
+
 /* footer responsive */
-@media (max-width: 767px) { 
+@media (max-width: 1024px) { 
     .containerfooter_row_col {
         width: 50%;
         margin-bottom: 30px;
     }
     .footer {
-        margin-top: 8em;
+        margin-top: 15em;
     }
 }
 
-@media (max-width: 574px) { 
+@media (max-width: 610px) { 
     .containerfooter_row_col {
         width: 100%;
         margin-bottom: 30px;
     }
     .footer {
-        margin-top: 12em;
+        margin-top: 50em;
+    }
+}
+@media (max-width: 560px) {
+    .footer {
+        margin-top: 75em;
     }
 }

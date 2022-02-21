@@ -1,3 +1,4 @@
+/* Inicio Seccion General-Grids */
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Ropa+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
 
@@ -40,11 +41,17 @@ header {
 .containernosotros { grid-area: seccionformularios;}
   
 .footer { grid-area: footer;}
+/* Fin Seccion General-Grids */
 
-/* Seccion Navbar */
+ /* Inicio de seccion navbar */
 .navbar {
     width: 100%;
     background-color: rgb(25, 209, 123);
+}
+
+.Logo:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
 }
 
 .nav-item .nav-link {
@@ -81,7 +88,7 @@ nav ul li i {
     margin-left: 5px;
 }
 
-/* Fin de Seccion Navbar */
+/* Final de seccion navbar */
 
 
 /* Seccion Main */
@@ -98,7 +105,8 @@ ul li a {
     text-decoration: none;
     color: rgb(7, 34, 39);
 }
-/* Nosotros */
+
+/* Inicio de Seccion Nosotros */
 
 .imagennosotros {
     text-align: center;
@@ -113,13 +121,13 @@ ul li a {
     justify-content: center;
     margin: auto;
     color:  rgb(216, 243, 220) !important ;
-    font-size: 5em;
+    font-size: 3em;
 
 }
   
   .textonosotros {
     color: rgb(7, 34, 39);
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     margin: auto;
     margin-bottom: 6em;
@@ -127,15 +135,16 @@ ul li a {
 
 .imagennosotros_texto_2 { 
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     color:  rgb(7, 34, 39);
 }
 
 .imagennosotros_texto_2 h2 {
-    font-size: 2em;
+    font-size: 1.50em;
 }
+/* Final de Seccion Nosotros */
 
-/* Seccion Footer */
+/* Inicio de seccion footer */
 
 footer {
     background-color: rgb(25, 209, 123);
@@ -238,6 +247,8 @@ ul {
     border-top: solid rgb(7, 34, 39);
 }
 
+/* Final de seccion footer */
+
 /* Seccion Queries nosotros*/    
 @media screen and (max-width:700px){
     .container-grid {  display: grid;
@@ -267,3 +278,5 @@ ul {
         margin-bottom: 30px;
     }
 }
+
+/* Final Seccion Queries */ 

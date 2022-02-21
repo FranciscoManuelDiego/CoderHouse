@@ -1,7 +1,7 @@
+/* Inicio Seccion General-Grids */
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Ropa+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
 
-/* Seccion navbar */
 * {
     padding: 0;
     margin: 0;
@@ -43,11 +43,17 @@ header {
 .ofertaproductos { grid-area: ofertaproductos; }
 
 .footer { grid-area: footer; }
+/* Fin Seccion General-Grids */
 
-/* Seccion Navbar */
+ /* Inicio de seccion navbar */
 .navbar {
     width: 100%;
     background-color: rgb(25, 209, 123);
+}
+
+.Logo:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
 }
 
 .nav-item .nav-link {
@@ -83,7 +89,40 @@ nav ul li i {
     padding-left: 10px;
     margin-left: 5px;
 }
-/* Fin seccion Navbar */
+/* Final de seccion navbar */
+
+/* Inicio de seccion carousel */
+.carousel-item {
+    height: 60rem;
+    background: black;
+    color: white;
+    position: relative;
+    font-size: 2em;
+    font-weight: 700;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top:0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.container {
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-bottom: 3em;
+}
+
+/* Fin de seccion Carousel */
 
 /* Seccion Ofertas */
 
@@ -95,6 +134,12 @@ nav ul li i {
     justify-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.productcard {
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
 }
 
 .ofertaproductos .productcard {
@@ -154,25 +199,6 @@ text-align: center;
 background-color: rgb(25, 209, 123) ;
 }
 
-/* Media Queries ofertas */
-
-
-
-/* Seccion Main */
-h1, h2, h3, h4, h5, h6 {
-    text-overflow: initial;
-    font-size: 1.50em;
-    font-weight: 600;
-    color: rgb(7, 34, 39);
-    text-decoration: none;
-    list-style: none;
-}
-
-ul li a {
-    text-decoration: none;
-    color: rgb(7, 34, 39);
-}
-/* Ofertas*/
 .ofertasimage {
     font-size: 3em;
     text-align: center;
@@ -232,7 +258,25 @@ ul li a {
     background-color: transparent;
 }
 
-/* Seccion Footer */
+/* Final Seccion Ofertas */
+
+/* Inicio Seccion Main */
+h1, h2, h3, h4, h5, h6 {
+    text-overflow: initial;
+    font-size: 1.50em;
+    font-weight: 600;
+    color: rgb(7, 34, 39);
+    text-decoration: none;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(7, 34, 39);
+}
+
+
+/* Inicio de seccion footer */
 
 footer {
     background-color: rgb(25, 209, 123);
@@ -325,7 +369,6 @@ ul {
     transition: all 0.3s;
 }
 
-/* Seccion Footer Final */
 .copyright {
     font-size: 1.30em;
     font-family: 'Poppins', sans-serif;
@@ -335,8 +378,9 @@ ul {
     text-align: center;
     border-top: solid rgb(7, 34, 39);
 }
+/* Final de seccion footer */
 
-/* Ofertas Queries */
+/* Seccion Queries Ofertas*/    
 @media screen and (max-width:700px) {
     .ofertasimage {
         font-size: 3em;
@@ -365,22 +409,31 @@ ul {
     }
     
 /* footer responsive */
-@media (max-width: 767px) { 
+/* Footer Responsive */
+@media (max-width: 1024px) { 
     .containerfooter_row_col {
         width: 50%;
         margin-bottom: 30px;
     }
     .footer {
-        margin-top: 4em;
+        margin-top: 15em;
     }
 }
 
-@media (max-width: 574px) { 
+@media (max-width: 610px) { 
     .containerfooter_row_col {
         width: 100%;
         margin-bottom: 30px;
     }
     .footer {
-        margin-top: 30em;
+        margin-top: 60em;
     }
 }
+@media (max-width: 560px) {
+    .footer {
+        margin-top: 90em;
+    }
+}
+
+
+/* Final Seccion Queries Ofertas*/    
