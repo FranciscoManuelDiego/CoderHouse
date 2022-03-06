@@ -1,13 +1,31 @@
 /* Inicio Seccion General-Grids */
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Ropa+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
+// Variables Maps y Mixins 
+$textdecoration: none;
+$color: rgb(0,0,0);
+
+$colors: (
+    color1: rgb(2, 2, 2),
+    color2: rgb(0, 0, 0),
+    color3: rgb(2, 1, 1),
+    "green": rgb(24, 192, 114),
+    "white": rgb(243, 233, 233),
+);
+
+@debug map-get($colors , "green" ); 
+
+// Mixins
+@mixin text ($textdecoration, $color) {
+    text-decoration: $textdecoration;
+    color: $color;
+}
 
 * {
     padding: 0;
     margin: 0;
     font-family: 'Ropa Sans', sans-serif;
 }
-
 
 
 img {
@@ -20,17 +38,13 @@ img {
     height: auto;
 }
 
-header {
-    display: flex;
-}
-
 .container-grid {  display: grid;
     grid-template-columns:  1fr 1fr 1fr;
-    grid-template-rows:  0.05fr 100% 1fr;
+    grid-template-rows:  0.05fr 100%  1fr ;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "header header header"
+      "header header header "
       "main main main"
       "ofertaproductos ofertaproductos ofertaproductos"
       "footer footer footer";
@@ -43,9 +57,10 @@ header {
 .ofertaproductos { grid-area: ofertaproductos; }
 
 .footer { grid-area: footer; }
+
 /* Fin Seccion General-Grids */
 
- /* Inicio de seccion navbar */
+/* Inicio de seccion navbar */
 .navbar {
     width: 100%;
     background-color: rgb(25, 209, 123);
@@ -64,9 +79,10 @@ header {
     bottom: 10px;
 }
 
+// aca aplique un map-get
 .nav-item .nav-link:hover {
     text-decoration: none !important;
-    background-color:rgb(24, 192, 114);
+    background-color: map-get ($colors, "green");
     transition: all 0.3s ease-in 0.1s;
     color: whitesmoke !important;
 }
@@ -74,9 +90,8 @@ header {
 #buttonnavbar {
     background-color:rgb(25, 209, 123); 
     border: black solid 0.15em; 
-    border-radius: 10%; 
     color:  rgb(0, 0, 0); 
-    margin-right:3.50em;
+    margin-right: 3.50em;
 }
 #navbarLight {
     transition: 0.4s;
@@ -85,11 +100,23 @@ header {
 #barrabusqueda {
     border-radius: 5%;
 }
+
 nav ul li i {
     font-size: 1.20em;
     padding-left: 10px;
     margin-left: 5px;
     color: rgb(0, 0, 0);
+}
+
+#carousel {
+    position: relative;
+    align-items: center;
+    margin: auto;
+}
+
+// inclui un mixin
+ul li a {
+    @include text(none, rgb(0,0,0))
 }
 /* Final de seccion navbar */
 
@@ -100,7 +127,6 @@ nav ul li i {
     color: white;
     position: relative;
     font-size: 2em;
-    font-weight: 700;
     background-position: center;
     background-size: cover;
 }
@@ -124,18 +150,30 @@ nav ul li i {
     padding-bottom: 3em;
 }
 
+.btn-primary {
+    background-color:rgb(24, 192, 114) !important;
+    border-color: rgb(24, 192, 114) !important ;
+    padding: 0.80em !important; 
+}
 /* Fin de seccion Carousel */
 
-/* Seccion Ofertas */
+/* Inicio de seccion main */
+h1, h2, h3, h4, h5, h6 {
+    @include text(none, rgb(0,0,0));
+    text-overflow: initial;
+    font-size: 1.50em;
+    font-weight: 600;
+    list-style: none;
+}
+
 
 .ofertaproductos {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
 }
 
 .productcard {
@@ -145,138 +183,86 @@ nav ul li i {
 }
 
 .ofertaproductos .productcard {
-width: 280px;
-margin-bottom: 20px;
-overflow: hidden;
-border: 0.20em solid rgb(25, 209, 123);
-border-radius: 1em;
-box-shadow: 0 0 10px rgb(116, 115, 115);
-text-align: center;
+    width: 280px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 0.20em solid rgb(25, 209, 123);
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgb(116, 115, 115);
+    text-align: center;
+    .product-image {
+        height:  450px;
+         width: 250px;
+         margin: 10px auto;
+    }
 }
 
-.ofertaproductos .productcard .product-image {
-height:  450px;
-width: 250px;
-margin: 10px auto;
-}
+
 
 .ofertaproductos .productcard .product-image img {
-width: 100%;
+    width: 100%;
 }
 
 .ofertaproductos .productcard .product-image img:hover {
-transform: scale(1.05);
-transition: 0.4s;
+    transform: scale(1.05);
+    transition: 0.4s;
 }
 
 .ofertaproductos .productcard .product-info strong {
-font-size: 1.35em;
-padding: 0 0 0 20px;
-margin-bottom: 10px;
+    font-size: 1.35em;
+    padding: 0 0 0 20px;
+    margin-bottom: 10px;
 }
 
 .ofertaproductos .productcard .productbtn {
-width: 100%;
+    width: 100%;
+    button {
+        width: 100%;
+        padding: 5px;
+        background-color: rgb(25, 209, 123);
+        border: none;
+        outline: none;
+        color: rgb(252, 239, 239);
+        cursor: pointer;
+        font-size: 1.35em;
+        border-radius: 0 0 10px 10px;
+    }
 }
 
-.ofertaproductos .productcard .productbtn button {
-width: 100%;
-padding: 5px;
-background-color: rgb(25, 209, 123);
-border: none;
-outline: none;
-color: rgb(252, 239, 239);
-cursor: pointer;
-font-size: 1.35em;
-border-radius: 0 0 10px 10px;
-}
 
 .ofertaproductos .productcard .productbtn button:hover {
-background-color: rgb(22, 182, 107);
-transition: 0.3s;
+    background-color: rgb(22, 182, 107);
+    transition: 0.3s;
 }
 
 #ofertaindex {
-text-align: center;
-background-color: rgb(25, 209, 123) ;
-}
-
-.ofertasimage {
-    font-size: 3em;
     text-align: center;
-    margin: auto;
-    background-image: url(https://images.samsung.com/is/image/samsung/assets/ar/explore/experience/ces2022/global0026_explore_ces2022_story-full-bleed_pc_1440x640.jpg?$ORIGIN_JPG$);
-    width: 1366px;
-    height: 607px;
-    background-repeat: no-repeat;
-    background-color: transparent;
+    background-color: rgb(25, 209, 123) ;
 }
 
-#textimage {
-    position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-48%, -50%);
-}
-
-
-
-
-#destacadosdelmes { 
-    position: relative;
-    width: 100%;
-    max-width: 1392px;
-    margin: 0 auto;
-    color: rgb(82, 183, 136);
-    font-size: 3em;
-    font-weight: 600;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    max-height: calc(2.4em);
-    line-height: 1.2;
-    overflow: visible;
-    word-break: keep-all;
+.suscribir {
+    font-size: 2.25em;
+    color: $color;
+    border-top: solid rgb(7, 34, 39) ;
     text-align: center;
-    text-overflow: clip;
+    background-color: rgb(25, 209, 123);
+    padding-bottom: 3em;
 }
 
-.smartphones, .accesorios {
-    color: inherit;
-    font-weight: 600;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    max-height: calc(2.4em);
-    line-height: 1.2;
-    overflow: visible;
-    word-break: keep-all;
-    text-align: center;
-    text-overflow: clip;
-    font-size: 3em ;
-    font-weight: 600;
-    background-color: transparent;
+.button {
+    font-size: 0.50em ;
+    background-color: rgb(25, 209, 123);
+    border: outset rgb(0, 0, 0);
+    border-radius: 0.30em;
+    padding: 0.40em;
+} 
+
+.button:hover {
+    color:whitesmoke;
+    background-color: rgb(22, 185, 109);
+    transition: all 0.1s ease-in 0.1s;
 }
-
-/* Final Seccion Ofertas */
-
-/* Inicio Seccion Main */
-h1, h2, h3, h4, h5, h6 {
-    text-overflow: initial;
-    font-size: 1.50em;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    list-style: none;
-}
-
-ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
+/* Final de Seccion Main */
 
 /* Inicio de seccion footer */
 
@@ -295,15 +281,18 @@ ul {
 }
 
 .containerfooter_row{
+    // Aplique un extend
+    @extend .containerfooter;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
+    .containerfooter_row_col {
+        width: 25%;
+     }
 }
 
-.containerfooter_row_col {
-   width: 25%;
-}
+
 
 .containerfooter_row_col ul li {
     margin-bottom: 15px;
@@ -353,28 +342,30 @@ ul {
 }
 .containerfooter_row_col .footer_pay {
     padding-top: 10px;
+    i{
+        display: inline-block;
+        font-size: 2.40em;
+        height: 40px;
+        width: 50px;
+        padding: 2%;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.2);
+        line-height: 40px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        border-radius: 50%;
+        box-sizing: content-box !important;
+        transition: all 0.3s;
+    }
 }
 
-.containerfooter_row_col .footer_pay i{
-    display: inline-block;
-    font-size: 2.40em;
-    height: 40px;
-    width: 50px;
-    padding: 2%;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.2);
-    line-height: 40px;
-    text-align: center;
-    color: rgb(7, 34, 39);
-    border-radius: 50%;
-    box-sizing: content-box !important;
-    transition: all 0.3s;
-}
+
+// aplique uns extend
 
 .copyright {
     font-size: 1.30em;
     font-family: 'Poppins', sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(7, 34, 39);
     font-weight:  300;
     background-color: rgb(25, 209, 123);
     text-align: center;
@@ -382,35 +373,21 @@ ul {
 }
 /* Final de seccion footer */
 
-/* Seccion Queries Ofertas*/    
-@media screen and (max-width:700px) {
-    .ofertasimage {
-        font-size: 3em;
-        text-align: center;
-        margin: auto;
-        background-image: url(https://images.samsung.com/is/image/samsung/assets/ar/explore/experience/ces2022/global0026_explore_ces2022_story-full-bleed_pc_1440x640.jpg?$ORIGIN_JPG$);
-        width: 700px;
-        height: 607px;
-        background-repeat: no-repeat;
-        background-color: transparent;
-    }
-}
-
-@media screen and (min-width: 560px) { 
+/* Seccion Queries index */
+@media screen and (min-width: 560px){
     .container-grid {  display: grid;
         grid-template-columns:  1fr 1fr 1fr;
-        grid-template-rows:  0.05fr 130% 1fr;
+        grid-template-rows:  0.05fr 120%  0.20fr ;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          "header header header"
+          "header header header "
           "main main main"
           "ofertaproductos ofertaproductos ofertaproductos"
           "footer footer footer";
       }
     }
     
-/* footer responsive */
 /* Footer Responsive */
 @media (max-width: 1024px) { 
     .containerfooter_row_col {
@@ -420,6 +397,9 @@ ul {
     .footer {
         margin-top: 15em;
     }
+    #ofertaindex {
+        margin-bottom: 4em;
+    }
 }
 
 @media (max-width: 610px) { 
@@ -428,14 +408,13 @@ ul {
         margin-bottom: 30px;
     }
     .footer {
-        margin-top: 60em;
+        margin-top: 50em;
     }
 }
 @media (max-width: 560px) {
     .footer {
-        margin-top: 90em;
+        margin-top: 80em;
     }
 }
 
-
-/* Final Seccion Queries Ofertas*/    
+/* Final de Queries */

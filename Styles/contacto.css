@@ -1,3 +1,4 @@
+/* Inicio Seccion General-Grids */
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Ropa+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
 
@@ -47,18 +48,24 @@ header {
 .seccionformularios { grid-area: seccionformularios;}
   
 .footer { grid-area: footer;}
+/* Fin Seccion General-Grids */
 
-/* Seccion Navbar */
+ /* Inicio de seccion navbar */
 .navbar {
     width: 100%;
     background-color: rgb(25, 209, 123);
+}
+
+.Logo:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
 }
 
 .nav-item .nav-link {
     text-decoration: none;
     list-style: none;
     font-size: 1.20em;
-    color: rgb(7, 34, 39);
+    color: rgb(0, 0, 0);
     bottom: 10px;
 }
 
@@ -73,7 +80,7 @@ header {
     background-color:rgb(25, 209, 123); 
     border: black solid 0.15em; 
     border-radius: 10%; 
-    color:  rgb(7, 34, 39); margin-right:3.50em;
+    color:  rgb(0, 0, 0); margin-right:3.50em;
 }
 #navbarLight {
     transition: 0.4s;
@@ -87,24 +94,27 @@ nav ul li i {
     font-size: 1.20em;
     padding-left: 10px;
     margin-left: 5px;
+    color: rgb(0, 0, 0);
 }
 
-/* Fin de Seccion Navbar */
+/* Final de seccion navbar */
 
 /* Seccion Main */
 h1, h2, h3, h4, h5, h6 {
     text-overflow: initial;
     font-size: 1.50em;
     font-weight: 600;
-    color: rgb(7, 34, 39);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     list-style: none;
 }
 
 ul li a {
     text-decoration: none;
-    color: rgb(7, 34, 39);
+    color: rgb(0, 0, 0);
 }
+
+/* Inicio de Seccion Contacto */
 
 .logocontacto {
     margin: auto;
@@ -195,51 +205,24 @@ ul li a {
    width: 30%;
    padding: 0.5rem  0.5rem;
    font-size: 1.1rem;
-   background-color: rgb(25, 209, 123) ;
+   background-color: rgb(24, 190, 113) !important;
    cursor: pointer;
    outline: none;
    border: none;
-   transition: 0.3s;
 }
 
 .btn:hover {
-   background-color: rgb(24, 190, 113);
+   background-color: rgb(24, 177, 105) !important;
+   border: solid black 1px ;
+   transition: all 0.4s;
 } 
 
 .labelfont {
    font-size: 1.50em;
 }
-
-/* Seccion queries contacto */
-@media screen and (max-width:700px) {
-   
-      .seccionformulario {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        padding: 1em 1em;
-     }
-     .logocontacto {
-         height: 90%;
-         width: 90%;
-     }
-}
-
-@media screen and (max-width:400px) {
-    .seccionformulario { 
-        padding: 0.40em 0.40em;
-    }
-    .btn {
-        width: 50%;
-        margin: 2%;
-    }
-}
+/* Final de Seccion Contacto */
 
 /* Seccion Footer */
-
 
 footer {
     background-color: rgb(25, 209, 123);
@@ -250,7 +233,7 @@ ul {
 }
 
 .containerfooter {
-    border-top: solid rgb(7, 34, 39);
+    border-top: solid rgb(0, 0, 0);
     max-width: 100%;
     margin: auto;
 }
@@ -303,7 +286,7 @@ ul {
     background-color: rgba(255, 255, 255, 0.2);
     line-height: 40px ;
     text-align: center;
-    color: rgb(7, 34, 39);
+    color: rgb(0, 0, 0);
     border-radius: 50%;
     box-sizing: content-box !important;
     transition: all 0.3s;
@@ -326,7 +309,7 @@ ul {
     background-color: rgba(255, 255, 255, 0.2);
     line-height: 40px;
     text-align: center;
-    color: rgb(7, 34, 39);
+    color: rgb(0, 0, 0);
     border-radius: 50%;
     box-sizing: content-box !important;
     transition: all 0.3s;
@@ -335,11 +318,40 @@ ul {
 .copyright {
     font-size: 1.30em;
     font-family: 'Poppins', sans-serif;
-    color: rgb(7, 34, 39);
+    color: rgb(0, 0, 0);
     font-weight:  300;
     background-color: rgb(25, 209, 123);
     text-align: center;
-    border-top: solid rgb(7, 34, 39);
+    border-top: solid rgb(0, 0, 0);
+}
+
+/* Final de Seccion Footer */
+
+/* Inicio de Seccion queries contacto */
+@media screen and (max-width:700px) {
+      .seccionformulario {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 1em 1em;
+     }
+     .logocontacto {
+         height: 90%;
+         width: 90%;
+     }
+}
+
+@media screen and (max-width:400px) {
+    .seccionformulario { 
+        padding: 0.40em 0.40em;
+    }
+    .btn {
+        width: 50%;
+        margin: 2%;
+    }
 }
 
 /* footer responsive */
@@ -356,3 +368,5 @@ ul {
         margin-bottom: 30px;
     }
 }
+
+/* Final de Secion Queries */

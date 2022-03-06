@@ -1,0 +1,292 @@
+
+// Seccion General Grids
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Ropa+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,700;1,700&family=Ropa+Sans&display=swap');
+
+// Seccion Variables
+$color1: rgb(25, 209, 123);
+$color2: rgb(24, 192, 114);
+$color3: rgb(180, 238, 188);
+$color4: rgb(0, 0, 0);
+$color5: rgb(236, 236, 236);
+$color6: rgba(255, 255, 255, 0.2);
+
+$font1: 'Ropa Sans', sans-serif ;
+
+$sm: 1em;
+$md: 3em;
+$lg: 6em;
+$xl: 12em;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $font1;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    display: flex;
+}
+
+.container-grid {  display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows:  0.05fr 5fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "containernosotros containernosotros containernosotros "
+      "footer footer footer";
+  }
+
+ header { grid-area: header; }
+
+.main { grid-area: main; }
+
+.containernosotros { grid-area: seccionformularios;}
+  
+.footer { grid-area: footer;}
+
+
+/* Seccion Navbar */
+.navbar {
+    width: 100%;
+    background-color: $color1;
+}
+
+
+.Logo:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
+}
+
+.nav-item .nav-link {
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.20em;
+    color: $color4;
+    bottom: 10px;
+}
+
+.nav-item .nav-link:hover {
+    text-decoration: none !important;
+    background-color: $color2;
+    transition: all 0.3s ease-in 0.1s;
+    color: $color5 !important;
+}
+
+#buttonnavbar {
+    background-color: $color1; 
+    border: $color4 solid 0.15em; 
+    border-radius: 10%; 
+    color: $color4; 
+    margin-right:3.50em;
+}
+#navbarLight {
+    transition: 0.4s;
+}    
+
+#barrabusqueda {
+    border-radius: 5%;
+}
+nav ul li i {
+    font-size: 1.20em;
+    padding-left: 10px;
+    margin-left: 5px;
+    color: $color4;
+}
+
+/* Fin de Seccion Navbar */
+
+
+/* Seccion Main */
+h1, h2, h3, h4, h5, h6 {
+    text-overflow: initial;
+    font-size: 1.50em;
+    font-weight: 600;
+    color: $color4;
+    text-decoration: none;
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: $color4;
+}
+/* Nosotros */
+
+.imagennosotros {
+    text-align: center;
+    margin: auto;
+    padding-bottom: $lg;
+    font-size: $md;
+}
+
+.imagennosotros_texto { 
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    color:  $color3 !important ;
+    font-size: $md;
+}
+.textonosotros {
+    color:  $color4;
+    font-size: 2.30em;
+    text-align: center;
+    margin: auto;
+    padding: 1.50em;
+    padding-bottom: 6em;
+}
+.imagennosotros_texto_2 { 
+    text-align: center;
+    font-size: 2.30em;
+    color: $color4;
+    padding: 1.50em;
+    h2 {
+        font-size: 1.50em !important;
+        padding: 1em;
+    }
+}
+/* Seccion Footer */
+
+footer {
+    background-color: $color1;
+}
+
+ul {
+    list-style: none;
+}
+
+.containerfooter {
+    border-top: solid $color4;
+    max-width: 100%;
+    margin: auto;
+    .containerfooter_row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+}
+
+.containerfooter_row_col{
+   width: 25%;
+}
+
+.containerfooter_row_col ul li {
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif ; 
+    a {
+        font-size: 1.50em;
+        text-transform: capitalize ;
+        padding-right: 9%;
+        display: block;
+        transition: all 0.3s ease;
+    }
+}
+
+
+.containerfooter_row_col ul li a:hover {
+    color: $color5;
+    padding-left:  10px;
+}
+
+
+.containerfooter_row_col h2, h3, h4, h5 {
+    font-size: 1.50em !important;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.containerfooter_row_col .footer_social a {
+    display: inline-block;
+    font-size: 2.20em;
+    height: 40px;
+    width: 50px;
+    padding: 2%;
+    margin: auto;
+    background-color: $color6;
+    line-height: 40px ;
+    text-align: center;
+    color: $color4;
+    border-radius: 50%;
+    box-sizing: content-box !important;
+    transition: all 0.3s;
+}
+
+.containerfooter_row_col .footer_social a:hover {
+    color: $color5;
+}
+
+.containerfooter_row_col .footer_pay {
+    padding-top: 10px;
+    i{
+        display: inline-block;
+        font-size: 2.40em;
+        height: 40px;
+        width: 50px;
+        padding: 2%;
+        margin: auto;
+        background-color: $color6;
+        line-height: 40px;
+        text-align: center;
+        color: $color4;
+        border-radius: 50%;
+        box-sizing: content-box !important;
+        transition: all 0.3s;
+    }
+}
+
+.copyright {
+    font-size: 1.30em;
+    font-family: 'Poppins', sans-serif;
+    color: $color4;
+    font-weight:  300;
+    background-color: $color1;
+    text-align: center;
+    border-top: solid $color4;
+}
+
+/* Seccion Queries nosotros*/    
+@media screen and (max-width:700px){
+    .container-grid {  display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        grid-template-rows:  0.05fr 5.20fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "header header header"
+          "main main main"
+          "containernosotros containernosotros containernosotros "
+          "footer footer footer";
+      }
+}
+
+/* footer responsive */
+@media (max-width: 767px) { 
+    .containerfooter_row_col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) { 
+    .containerfooter_row_col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
