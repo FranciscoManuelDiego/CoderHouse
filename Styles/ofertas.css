@@ -71,6 +71,7 @@ header {
     color: whitesmoke !important;
 }
 
+
 #buttonnavbar {
     background-color:rgb(25, 209, 123); 
     border: black solid 0.15em; 
@@ -243,23 +244,23 @@ background-color: rgb(25, 209, 123) ;
 }
 
 .smartphones, .accesorios {
-    color: inherit;
-    font-weight: 600;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    max-height: calc(2.4em);
-    line-height: 1.2;
-    overflow: visible;
-    word-break: keep-all;
+    font-size: 3em;
     text-align: center;
-    text-overflow: clip;
-    font-size: 3em ;
     font-weight: 600;
-    background-color: transparent;
 }
 
+.smartphones a:hover {
+    padding-left:  10px;
+    color:rgb(0, 0, 0) !important;
+    transition: all 0.3s;
+}
+
+.accesorios a:hover {
+    padding-left:  10px;
+    color: rgb(0, 0, 0) !important;
+    transition: all 0.3s;
+}
+ 
 /* Final Seccion Ofertas */
 
 /* Inicio Seccion Main */

@@ -76,6 +76,7 @@ header {
     color: whitesmoke !important;
 }
 
+
 #buttonnavbar {
     background-color:rgb(25, 209, 123); 
     border: black solid 0.15em; 
@@ -366,6 +367,10 @@ ul {
     .containerfooter_row_col {
         width: 50%;
         margin-bottom: 30px;
+    }
+    .logocontacto {
+        height: 80%;
+        width: 80%;
     }
 }
 
