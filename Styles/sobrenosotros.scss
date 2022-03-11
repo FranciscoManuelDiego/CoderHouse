@@ -40,7 +40,7 @@ header {
 
 .container-grid {  display: grid;
     grid-template-columns:  1fr 1fr 1fr;
-    grid-template-rows:  0.05fr 5fr 1fr;
+    grid-template-rows:  0.05fr 80% 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -83,7 +83,7 @@ header {
     text-decoration: none !important;
     background-color: $color2;
     transition: all 0.3s ease-in 0.1s;
-    color: $color5 !important;
+
 }
 
 #buttonnavbar {
@@ -261,26 +261,14 @@ ul {
     border-top: solid $color4;
 }
 
-/* Seccion Queries nosotros*/    
-@media screen and (max-width:700px){
-    .container-grid {  display: grid;
-        grid-template-columns:  1fr 1fr 1fr;
-        grid-template-rows:  0.05fr 5.20fr 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "header header header"
-          "main main main"
-          "containernosotros containernosotros containernosotros "
-          "footer footer footer";
-      }
-}
-
 /* footer responsive */
 @media (max-width: 767px) { 
     .containerfooter_row_col {
         width: 50%;
         margin-bottom: 30px;
+    }
+    .container-grid {
+        grid-template-rows:  0.05fr 70% 1fr;
     }
 }
 
@@ -288,5 +276,20 @@ ul {
     .containerfooter_row_col {
         width: 100%;
         margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 485px) {
+    .imagennosotros {
+        font-size: 1.50em;
+    }
+    .textonosotros {
+        font-size: 1.50em;
+    }
+    .imagennosotros_texto_2 {
+        font-size: 1.50em;
+    } 
+    .container-grid {
+        grid-template-rows:  0.05fr 50% 1fr;
     }
 }

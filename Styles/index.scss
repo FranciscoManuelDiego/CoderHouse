@@ -40,7 +40,7 @@ img {
 
 .container-grid {  display: grid;
     grid-template-columns:  1fr 1fr 1fr;
-    grid-template-rows:  0.05fr 100%  1fr ;
+    grid-template-rows:  0.05fr 70%  1fr ;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -84,10 +84,8 @@ img {
     text-decoration: none !important;
     background-color: map-get ($colors, "green");
     transition: all 0.3s ease-in 0.1s;
-    color: whitesmoke !important;
+    color: $color1 !important;
 }
-
-
 
 #buttonnavbar {
     background-color:rgb(25, 209, 123); 
@@ -344,23 +342,23 @@ ul {
 }
 .containerfooter_row_col .footer_pay {
     padding-top: 10px;
-    i{
-        display: inline-block;
-        font-size: 2.40em;
-        height: 40px;
-        width: 50px;
-        padding: 2%;
-        margin: auto;
-        background-color: rgba(255, 255, 255, 0.2);
-        line-height: 40px;
-        text-align: center;
-        color: rgb(0, 0, 0);
-        border-radius: 50%;
-        box-sizing: content-box !important;
-        transition: all 0.3s;
-    }
 }
 
+.containerfooter_row_col .footer_pay i {
+    display: inline-block;
+    font-size: 2.40em;
+    height: 40px;
+    width: 50px;
+    padding: 2%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    line-height: 40px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    box-sizing: content-box !important;
+    transition: all 0.3s;
+}
 
 // aplique uns extend
 
@@ -410,12 +408,12 @@ ul {
         margin-bottom: 30px;
     }
     .footer {
-        margin-top: 50em;
+        margin-top: 45em;
     }
 }
 @media (max-width: 560px) {
     .footer {
-        margin-top: 80em;
+        margin-top: 70em;
     }
 }
 

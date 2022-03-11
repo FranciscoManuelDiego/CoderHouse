@@ -23,7 +23,7 @@ img {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 0.05fr 100%  1fr;
-      grid-template-rows: 0.05fr 100%  1fr;
+      grid-template-rows: 0.05fr 80%  1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
       grid-template-areas: "header header header "
@@ -87,7 +87,6 @@ header {
   background-color: #18c072;
   -webkit-transition: all 0.3s ease-in 0.1s;
   transition: all 0.3s ease-in 0.1s;
-  color: whitesmoke !important;
 }
 
 #buttonnavbar {
@@ -419,11 +418,13 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
-  .footer {
-    margin-top: 15em;
-  }
   #ofertaindex {
     margin-bottom: 4em;
+  }
+}
+@media (max-width: 960px) {
+  .footer {
+    margin-top: 6em;
   }
 }
 
@@ -433,15 +434,20 @@ ul {
     margin-bottom: 30px;
   }
   .footer {
-    margin-top: 50em;
+    margin-top: 55em;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 567px) {
+  .containerfooter_row_col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
   .footer {
-    margin-top: 80em;
+    margin-top: 100em;
   }
 }
+
 
 /* Final de Queries */
 /*# sourceMappingURL=index.css.map */

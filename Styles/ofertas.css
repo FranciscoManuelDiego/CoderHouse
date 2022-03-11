@@ -68,7 +68,6 @@ header {
     text-decoration: none !important;
     background-color:rgb(24, 192, 114);
     transition: all 0.3s ease-in 0.1s;
-    color: whitesmoke !important;
 }
 
 
@@ -384,33 +383,9 @@ ul {
 /* Final de seccion footer */
 
 /* Seccion Queries Ofertas*/    
-@media screen and (max-width:700px) {
-    .ofertasimage {
-        font-size: 3em;
-        text-align: center;
-        margin: auto;
-        background-image: url(https://images.samsung.com/is/image/samsung/assets/ar/explore/experience/ces2022/global0026_explore_ces2022_story-full-bleed_pc_1440x640.jpg?$ORIGIN_JPG$);
-        width: 700px;
-        height: 607px;
-        background-repeat: no-repeat;
-        background-color: transparent;
-    }
-}
 
-@media screen and (min-width: 560px) { 
-    .container-grid {  display: grid;
-        grid-template-columns:  1fr 1fr 1fr;
-        grid-template-rows:  0.05fr 130% 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "header header header"
-          "main main main"
-          "ofertaproductos ofertaproductos ofertaproductos"
-          "footer footer footer";
-      }
-    }
-    
+
+
 /* footer responsive */
 /* Footer Responsive */
 @media (max-width: 1024px) { 
@@ -419,22 +394,37 @@ ul {
         margin-bottom: 30px;
     }
     .footer {
-        margin-top: 15em;
+        margin-top: 18em;
+    }
+}
+@media (max-width: 878px) {
+    .footer {
+        margin-top: 35em;
     }
 }
 
-@media (max-width: 610px) { 
+@media (max-width: 878px) { 
     .containerfooter_row_col {
         width: 100%;
         margin-bottom: 30px;
     }
     .footer {
-        margin-top: 60em;
+        margin-top: 38em;
     }
 }
-@media (max-width: 560px) {
+
+@media (max-width: 768px) { 
+    .containerfooter_row_col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
     .footer {
-        margin-top: 90em;
+        margin-top: 50em;
+    }
+}
+@media (max-width: 598px) {
+    .footer {
+        margin-top: 88em;
     }
 }
 
