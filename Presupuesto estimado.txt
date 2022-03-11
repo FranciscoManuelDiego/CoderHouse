@@ -1,0 +1,15 @@
+
+Objetivo: Buscar que el cliente este de acuerdo con el sketch, y el proyecto ya evaluado por el mismo.
+
+Herramientas Usadas : HTML, CSS, BOOTSTRAP, Balsamiq.
+
+Diseños totalmente responsive adaptados a todas las resoluciones.
+
+Plataformas: Netlify, GitHub
+
+Fases de Trabajo: Feses de diseño , fases de estructura, fase de escrutura, fase de pruebas y por ultimo fase de entrega y puesta de producción.
+
+Tiempo Estimado de trabajo: 30hs.
+
+Gestos Estimados: Creación de la Página AR$8000.
+
