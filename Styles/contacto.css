@@ -335,6 +335,9 @@ ul {
 
 /* Inicio de Seccion queries contacto */
 @media screen and (max-width:700px) {
+    .container-grid {  display: grid;
+        grid-template-rows:  0.10fr 80% 1fr;
+      }
       .seccionformulario {
         position: relative;
         display: flex;

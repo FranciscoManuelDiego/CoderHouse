@@ -281,54 +281,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Final de Seccion Main */
+
 /* Inicio de seccion footer */
+
 footer {
-  background-color: #19d17b;
+  background-color: rgb(25, 209, 123);
 }
 
 ul {
   list-style: none;
 }
 
-.containerfooter, .containerfooter_row {
-  border-top: solid black;
+.containerfooter {
+  border-top: solid rgb(0, 0, 0);
   max-width: 100%;
   margin: auto;
 }
 
-.containerfooter_row {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.containerfooter_row{
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   text-align: center;
 }
 
-.containerfooter_row .containerfooter_row_col {
-  width: 25%;
+.containerfooter_row_col {
+ width: 25%;
 }
 
 .containerfooter_row_col ul li {
   margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif ; 
 }
 
 .containerfooter_row_col ul li a {
   font-size: 1.50em;
-  text-transform: capitalize;
+  text-transform: capitalize ;
   padding-right: 9%;
   display: block;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
+
 .containerfooter_row_col ul li a:hover {
   color: white;
-  padding-left: 10px;
+  padding-left:  10px;
 }
 
 .containerfooter_row_col h2, h3, h4, h5 {
@@ -347,25 +344,22 @@ ul {
   padding: 2%;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.2);
-  line-height: 40px;
+  line-height: 40px ;
   text-align: center;
-  color: black;
+  color: rgb(0, 0, 0);
   border-radius: 50%;
-  -webkit-box-sizing: content-box !important;
-          box-sizing: content-box !important;
-  -webkit-transition: all 0.3s;
+  box-sizing: content-box !important;
   transition: all 0.3s;
 }
 
 .containerfooter_row_col .footer_social a:hover {
   color: white;
 }
-
 .containerfooter_row_col .footer_pay {
   padding-top: 10px;
 }
 
-.containerfooter_row_col .footer_pay i {
+.containerfooter_row_col .footer_pay i{
   display: inline-block;
   font-size: 2.40em;
   height: 40px;
@@ -375,25 +369,23 @@ ul {
   background-color: rgba(255, 255, 255, 0.2);
   line-height: 40px;
   text-align: center;
-  color: black;
+  color: rgb(7, 34, 39);
   border-radius: 50%;
-  -webkit-box-sizing: content-box !important;
-          box-sizing: content-box !important;
-  -webkit-transition: all 0.3s;
+  box-sizing: content-box !important;
   transition: all 0.3s;
 }
 
 .copyright {
   font-size: 1.30em;
   font-family: 'Poppins', sans-serif;
-  color: #072227;
-  font-weight: 300;
-  background-color: #19d17b;
+  color: rgb(0, 0, 0);
+  font-weight:  300;
+  background-color: rgb(25, 209, 123);
   text-align: center;
-  border-top: solid #072227;
+  border-top: solid rgb(7, 34, 39);
 }
-
 /* Final de seccion footer */
+
 /* Seccion Queries index */
 @media screen and (min-width: 560px) {
   .container-grid {
@@ -414,14 +406,25 @@ ul {
 
 /* Footer Responsive */
 @media (max-width: 1024px) {
-  .containerfooter_row_col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
   #ofertaindex {
     margin-bottom: 4em;
   }
 }
+
+@media (max-width: 767px) { 
+  .containerfooter_row_col {
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 574px) { 
+  .containerfooter_row_col {
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 960px) {
   .footer {
     margin-top: 6em;
@@ -429,20 +432,12 @@ ul {
 }
 
 @media (max-width: 610px) {
-  .containerfooter_row_col {
-    width: 100%;
-    margin-bottom: 30px;
-  }
   .footer {
     margin-top: 55em;
   }
 }
 
 @media (max-width: 567px) {
-  .containerfooter_row_col {
-    width: 100%;
-    margin-bottom: 30px;
-  }
   .footer {
     margin-top: 100em;
   }
